@@ -1,0 +1,110 @@
+[
+  {
+    "case": "idle",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 29,
+    "errors": []
+  },
+  {
+    "case": "route",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 39,
+    "errors": []
+  },
+  {
+    "case": "walking",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 39,
+    "errors": []
+  },
+  {
+    "case": "boarding",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 32,
+    "errors": []
+  },
+  {
+    "case": "riding",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 43,
+    "errors": []
+  },
+  {
+    "case": "stop",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 44,
+    "errors": []
+  },
+  {
+    "case": "requested",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 46,
+    "errors": []
+  },
+  {
+    "case": "alighting",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 42,
+    "errors": []
+  },
+  {
+    "case": "arrived",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 31,
+    "errors": []
+  },
+  {
+    "case": "uncertain",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 41,
+    "errors": []
+  },
+  {
+    "case": "details",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 50,
+    "errors": []
+  },
+  {
+    "case": "london",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 38,
+    "errors": []
+  },
+  {
+    "case": "browse",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 38,
+    "errors": []
+  },
+  {
+    "case": "rail",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 33,
+    "errors": []
+  },
+  {
+    "case": "boarding-live",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 41,
+    "errors": []
+  },
+  {
+    "case": "boarding-stale",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 40,
+    "errors": []
+  },
+  {
+    "case": "transfer",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 38,
+    "errors": []
+  },
+  {
+    "case": "dedup",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 42,
+    "errors": []
+  }
+]

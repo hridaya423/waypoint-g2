@@ -1,0 +1,95 @@
+{
+  "entries": [
+    {
+      "id": 0,
+      "level": "log",
+      "message": "[EvenAppBridge] Bridge initialized",
+      "ts": 1791036159703
+    },
+    {
+      "id": 1,
+      "level": "log",
+      "message": "[Simulator] Flutter Bridge intercepted: evenAppMessage",
+      "ts": 1791036159706
+    },
+    {
+      "id": 2,
+      "level": "log",
+      "message": "[Simulator] Flutter Bridge intercepted: evenAppMessage",
+      "ts": 1791036159721
+    },
+    {
+      "id": 3,
+      "level": "log",
+      "message": "[EvenAppBridge] EvenHub event: {\"jsonData\":{\"containerID\":1,\"containerName\":\"instruction\",\"eventType\":2},\"textEvent\":{\"containerID\":1,\"containerName\":\"instruction\",\"eventType\":2}}",
+      "ts": 1791036180534
+    },
+    {
+      "id": 4,
+      "level": "log",
+      "message": "[Simulator] Flutter Bridge intercepted: evenAppMessage",
+      "ts": 1791036180538
+    },
+    {
+      "id": 5,
+      "level": "log",
+      "message": "[EvenAppBridge] EvenHub event: {\"jsonData\":{\"containerID\":1,\"containerName\":\"instruction\",\"eventType\":2},\"textEvent\":{\"containerID\":1,\"containerName\":\"instruction\",\"eventType\":2}}",
+      "ts": 1791036180687
+    },
+    {
+      "id": 6,
+      "level": "log",
+      "message": "[Simulator] Flutter Bridge intercepted: evenAppMessage",
+      "ts": 1791036180689
+    },
+    {
+      "id": 7,
+      "level": "log",
+      "message": "[EvenAppBridge] EvenHub event: {\"jsonData\":{\"containerID\":1,\"containerName\":\"instruction\",\"eventType\":2},\"textEvent\":{\"containerID\":1,\"containerName\":\"instruction\",\"eventType\":2}}",
+      "ts": 1791036180842
+    },
+    {
+      "id": 8,
+      "level": "log",
+      "message": "[EvenAppBridge] EvenHub event: {\"jsonData\":{\"containerID\":1,\"containerName\":\"instruction\",\"eventType\":2},\"textEvent\":{\"containerID\":1,\"containerName\":\"instruction\",\"eventType\":2}}",
+      "ts": 1791036180995
+    },
+    {
+      "id": 9,
+      "level": "log",
+      "message": "[Simulator] Flutter Bridge intercepted: evenAppMessage",
+      "ts": 1791036180997
+    },
+    {
+      "id": 10,
+      "level": "log",
+      "message": "[EvenAppBridge] EvenHub event: {\"jsonData\":{\"containerID\":1,\"containerName\":\"instruction\",\"eventType\":2},\"textEvent\":{\"containerID\":1,\"containerName\":\"instruction\",\"eventType\":2}}",
+      "ts": 1791036181150
+    },
+    {
+      "id": 11,
+      "level": "log",
+      "message": "[EvenAppBridge] EvenHub event: {\"jsonData\":{\"containerID\":1,\"containerName\":\"instruction\",\"eventType\":2},\"textEvent\":{\"containerID\":1,\"containerName\":\"instruction\",\"eventType\":2}}",
+      "ts": 1791036181303
+    },
+    {
+      "id": 12,
+      "level": "log",
+      "message": "[Simulator] Flutter Bridge intercepted: evenAppMessage",
+      "ts": 1791036181304
+    },
+    {
+      "id": 13,
+      "level": "log",
+      "message": "[EvenAppBridge] EvenHub event: {\"jsonData\":{\"containerID\":1,\"containerName\":\"instruction\",\"eventType\":2},\"textEvent\":{\"containerID\":1,\"containerName\":\"instruction\",\"eventType\":2}}",
+      "ts": 1791036181458
+    },
+    {
+      "id": 14,
+      "level": "log",
+      "message": "[Simulator] Flutter Bridge intercepted: evenAppMessage",
+      "ts": 1791036181460
+    }
+  ],
+  "total": 15
+}

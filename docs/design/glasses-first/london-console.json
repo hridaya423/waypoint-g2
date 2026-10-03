@@ -1,0 +1,53 @@
+{
+  "entries": [
+    {
+      "id": 0,
+      "level": "debug",
+      "message": "[vite] connecting...",
+      "ts": 1791047120878
+    },
+    {
+      "id": 1,
+      "level": "debug",
+      "message": "[vite] connected.",
+      "ts": 1791047120899
+    },
+    {
+      "id": 2,
+      "level": "log",
+      "message": "[EvenAppBridge] Bridge initialized",
+      "ts": 1791047120910
+    },
+    {
+      "id": 3,
+      "level": "log",
+      "message": "[Simulator] Flutter Bridge intercepted: evenAppMessage",
+      "ts": 1791047120910
+    },
+    {
+      "id": 4,
+      "level": "log",
+      "message": "[Simulator] Flutter Bridge intercepted: evenAppMessage",
+      "ts": 1791047120921
+    },
+    {
+      "id": 5,
+      "level": "log",
+      "message": "[Simulator] Flutter Bridge intercepted: evenAppMessage",
+      "ts": 1791047120930
+    },
+    {
+      "id": 6,
+      "level": "log",
+      "message": "[Simulator] Flutter Bridge intercepted: evenAppMessage",
+      "ts": 1791047120938
+    },
+    {
+      "id": 7,
+      "level": "log",
+      "message": "[Simulator] Flutter Bridge intercepted: evenAppMessage",
+      "ts": 1791047120945
+    }
+  ],
+  "total": 8
+}

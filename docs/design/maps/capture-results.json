@@ -1,0 +1,20 @@
+[
+  {
+    "case": "map-walk",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 36,
+    "errors": []
+  },
+  {
+    "case": "map-overview",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 29,
+    "errors": []
+  },
+  {
+    "case": "map-unavailable",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 44,
+    "errors": []
+  }
+]

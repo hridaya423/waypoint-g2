@@ -1,0 +1,32 @@
+[
+  {
+    "scenario": "riding",
+    "events": 9,
+    "errors": []
+  },
+  {
+    "scenario": "stop",
+    "events": 1,
+    "errors": []
+  },
+  {
+    "scenario": "alighting",
+    "events": 2,
+    "errors": []
+  },
+  {
+    "scenario": "uncertain",
+    "events": 4,
+    "errors": []
+  },
+  {
+    "scenario": "boarding",
+    "events": 1,
+    "errors": []
+  },
+  {
+    "scenario": "detected",
+    "events": 2,
+    "errors": []
+  }
+]

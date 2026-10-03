@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+  <meta charset="UTF-8" /><title>Waypoint glasses verification</title
+  ><style>
+    body {
+      background: #181b19;
+      color: #fff;
+      font-family: system-ui;
+    }
+    canvas {
+      display: block;
+      margin: 24px 0;
+    }
+    p {
+      max-width: 600px;
+    }
+  </style>
+  <h1>Glasses rendering verification</h1>
+  <p>Development fixture. All journey states are labelled rehearsal.</p>
+  <canvas id="hud"></canvas>
+  <pre id="state"></pre>
+  <script type="module">
+    import { loadStreets, routeBounds, mapView } from "../src/streetMap.ts";
+    import { Glasses } from "../src/glasses.ts";
+    import { drawHud } from "../src/renderHud.ts";
+    import { hudScene } from "../src/hud.ts";
+    import { instruction, observe } from "../src/journey.ts";
+    import { rehearsalJourney, rehearsalTripFixes } from "../src/rehearsal.ts";
+    import { parseRoutes, matchStops } from "../src/tfl.ts";
+    import fixture from "../docs/research/tfl-journey-sample.json";
+    import sequence from "../docs/research/tfl-line-24-inbound.json";
+    import { project } from "../src/geo.ts";
+    const name = new URLSearchParams(location.search).get("case") || "riding";
+    const now = Date.now();
+    let j = rehearsalJourney(
+      name === "details" || name === "transfer" || name === "dedup"
+        ? "riding"
+        : name.startsWith("boarding")
+          ? "boarding"
+          : name,
+      now,
+    );
+    if (name.startsWith("trip-") || name.startsWith("map-")) {
+      j = rehearsalJourney("full-trip", now);
+      const count =
+        name.startsWith("map-") || name === "trip-walk"
+          ? 1
+          : name === "trip-bus"
+            ? 9
+            : 24;
+      for (const fix of rehearsalTripFixes(now).slice(0, count))
+        j = observe(j, fix, fix.timestamp);
+    }
+    if (name === "riding") j.progress += 30;
+    if (name === "details") {
+      j.route.legs[0].stops[1].name = "Hampstead Road / Drummond Street";
+      j.route.legs[0].to.name = "King’s Cross St. Pancras International";
+    }
+    if (name === "london" || name === "browse") {
+      const route = parseRoutes(fixture, now)[0];
+      route.rehearsal = true;
+      const index = route.legs.findIndex((l) => l.mode === "bus");
+      const leg = route.legs[index];
+      const names = fixture.journeys[0].legs[index].path.stopPoints.map(
+        (s) => s.name,
+      );
+      leg.stops = matchStops(leg, sequence, names);
+      leg.stopTracking = true;
+      const point = leg.stops[5];
+      j = {
+        route,
+        legIndex: index,
+        phase: "riding",
+        progress: project(point, leg.path).along + 30,
+        lastFix: { ...point, timestamp: now, accuracy: 5 },
+        quality: "good",
+        stopAlert: false,
+        acknowledged: false,
+      };
+    }
+    if (name === "rail") {
+      j.route.legs[0].mode = "tube";
+      j.route.legs[0].line = "Northern";
+      j.route.legs[0].direction = "High Barnet";
+      j.phase = "riding";
+      j.quality = "good";
+      j.progress = 130;
+    }
+    if (name === "transfer")
+      j.route.legs.push({ ...j.route.legs[0], mode: "walking", duration: 5 });
+    const arrivals = name.startsWith("boarding-")
+      ? [
+          {
+            id: "demo",
+            line: "24",
+            lineId: j.route.legs[0].lineId,
+            destination: "Hampstead Heath",
+            expected: now + 120000,
+            timestamp: name === "boarding-stale" ? now - 100000 : now,
+            vehicleId: "demo",
+            platform: "Stop C",
+          },
+        ]
+      : [];
+    let scene = hudScene(
+      j,
+      instruction(j, j.lastFix?.timestamp ?? now),
+      j.lastFix?.timestamp ?? now,
+      undefined,
+      0,
+      0,
+      name === "browse" ? 99 : 0,
+      name === "details",
+      arrivals,
+    );
+    if (name === "route") {
+      const route = parseRoutes(fixture, now)[0];
+      scene = hudScene(null, instruction(null, now), now, route, 0, 2);
+      scene.rehearsal = true;
+    }
+    if (name === "idle") scene = hudScene(null, instruction(null, now), now);
+    if (name.startsWith("map-")) {
+      let area = null;
+      if (name !== "map-unavailable") {
+        const result = await loadStreets(
+          routeBounds(j.route),
+          new AbortController().signal,
+        );
+        area = result.area;
+      }
+      scene.map = mapView(
+        j.route,
+        area,
+        j.legIndex,
+        j.lastFix,
+        name === "map-overview",
+        area ? "Cached street map" : "Street map unavailable",
+      );
+    }
+    drawHud(document.getElementById("hud"), scene);
+    document.getElementById("state").textContent = JSON.stringify(
+      scene,
+      null,
+      2,
+    );
+    const glasses = new Glasses();
+    glasses.onState = (state) => {
+      if (state.connected) {
+        glasses.display(scene);
+        if (name === "dedup")
+          setTimeout(() => {
+            glasses.display(scene);
+            glasses.display(scene);
+            glasses.display(scene);
+          }, 400);
+      }
+    };
+    await glasses.connect();
+  </script>
+</html>

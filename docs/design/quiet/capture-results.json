@@ -1,0 +1,134 @@
+[
+  {
+    "case": "idle",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 32,
+    "errors": []
+  },
+  {
+    "case": "route",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 31,
+    "errors": []
+  },
+  {
+    "case": "walking",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 32,
+    "errors": []
+  },
+  {
+    "case": "boarding",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 34,
+    "errors": []
+  },
+  {
+    "case": "riding",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 33,
+    "errors": []
+  },
+  {
+    "case": "stop",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 43,
+    "errors": []
+  },
+  {
+    "case": "requested",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 34,
+    "errors": []
+  },
+  {
+    "case": "alighting",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 57,
+    "errors": []
+  },
+  {
+    "case": "arrived",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 52,
+    "errors": []
+  },
+  {
+    "case": "uncertain",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 49,
+    "errors": []
+  },
+  {
+    "case": "details",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 66,
+    "errors": []
+  },
+  {
+    "case": "london",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 51,
+    "errors": []
+  },
+  {
+    "case": "browse",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 65,
+    "errors": []
+  },
+  {
+    "case": "rail",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 44,
+    "errors": []
+  },
+  {
+    "case": "boarding-live",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 55,
+    "errors": []
+  },
+  {
+    "case": "boarding-stale",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 56,
+    "errors": []
+  },
+  {
+    "case": "transfer",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 49,
+    "errors": []
+  },
+  {
+    "case": "dedup",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 80,
+    "errors": []
+  },
+  {
+    "case": "trip-walk",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 54,
+    "errors": []
+  },
+  {
+    "case": "trip-bus",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 76,
+    "errors": []
+  },
+  {
+    "case": "trip-final-walk",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 50,
+    "errors": []
+  },
+  {
+    "case": "detected",
+    "calls": 5,
+    "first_frame_bridge_span_ms": 67,
+    "errors": []
+  }
+]

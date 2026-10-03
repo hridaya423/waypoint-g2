@@ -1,0 +1,30 @@
+{
+  "package_id": "com.hridyaagrawal.waypoint",
+  "edition": "202601",
+  "name": "Waypoint",
+  "version": "0.5.0",
+  "min_sdk_version": "0.0.16",
+  "entrypoint": "index.html",
+  "permissions": [
+    {
+      "name": "network",
+      "desc": "Loads London journeys and arrivals from TfL, and nearby streets from OpenStreetMap via Overpass.",
+      "whitelist": [
+        "https://api.tfl.gov.uk",
+        "https://overpass-api.de"
+      ]
+    },
+    {
+      "name": "location",
+      "desc": "Uses location for an active journey, saved-destination search, current-location request or device test."
+    },
+    {
+      "name": "g2-microphone",
+      "desc": "Tests microphone delivery during an explicitly started device diagnostic. Audio is not stored or uploaded."
+    }
+  ],
+  "supported_languages": [
+    "en"
+  ],
+  "min_app_version": "2.2.10"
+}
